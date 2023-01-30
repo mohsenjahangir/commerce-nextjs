@@ -16,8 +16,8 @@
 }
 
 html {
-    
-    width: 1440px;
+    overflow-x: hidden;
+    max-width: max-content;
     height: 100%;
     box-sizing: border-box;
     touch-action: manipulation;
@@ -30,7 +30,6 @@ html {
 html,
 body {
     font-family: IranSans !important;
-    
     direction: rtl !important;
 }
 

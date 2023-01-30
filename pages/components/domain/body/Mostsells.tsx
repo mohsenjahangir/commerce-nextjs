@@ -4,8 +4,9 @@ import ArrowLeftSvg from "../../../../public/svg/arrowLeftIcon.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import DirectionSvg from "../../../../public/svg/leftdirectionIcongray.svg";
-import BottomPhoto1 from "../../../../public/photos/bottom1.png";
-import BottomPhoto2 from "../../../../public/photos/bottom2.png";
+import BottomPhoto5 from "../../../../public/photos/bottom5.png";
+import BottomPhoto4 from "../../../../public/photos/bottom4.png";
+import BottomPhoto3 from "../../../../public/photos/bottom3.png";
 import Image from "next/image";
 import ShoesPhoto from "../../../../public/photos/shoes.png";
 
@@ -13,118 +14,117 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
-export const Discount = () => {
+export const Mostsells = () => {
   const shoesItems: {
     price2: string;
     price: string;
     off: string;
-    icon: any;
+    image: any;
   }[] = [
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
-      icon: <DirectionSvg />,
+      image: ShoesPhoto,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
@@ -160,7 +160,7 @@ export const Discount = () => {
       >
         {shoesItems.map((item) => (
           <SwiperSlide className=" mt-8">
-            <Image src={ShoesPhoto} alt="" className="" />
+            <Image src={item.image} alt="" className="" />
             <div className=" flex justify-between mr-9">
               <span className="font-black ">{item.price}</span>تومان
             </div>
@@ -173,12 +173,11 @@ export const Discount = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="grid grid-cols-2   mt-4">
-        <div className=" w-1200 h-52">
-          <Image className=" rounded-2xl" src={BottomPhoto1} alt="" />
-        </div>
-        <div className=" w-1200 h-52 mr-1">
-          <Image className=" rounded-2xl" src={BottomPhoto2} alt="" />
+      <div className="grid grid-cols-2 gap-4 mt-6">
+        <Image src={BottomPhoto3} alt="" className=" rounded-3xl"/>
+        <div className="grid grid-row">
+            <Image src={BottomPhoto4} alt="" className="rounded-3xl"/>
+            <Image src={BottomPhoto5} alt="" className="rounded-3xl mt-4" />
         </div>
       </div>
     </div>
