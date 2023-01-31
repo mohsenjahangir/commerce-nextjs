@@ -117,7 +117,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <hr className="mr-30" />
+      <hr className="mr-30 w-1200" />
       <p className=" mt-3 mr-30">کلیه حقوق متعلق به شرکت ویستا است. </p>
     </>
   );

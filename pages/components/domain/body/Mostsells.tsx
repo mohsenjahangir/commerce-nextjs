@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import DiscountSvg from "../../../../public/svg/discountIcon.svg";
 import ArrowLeftSvg from "../../../../public/svg/arrowLeftIcon.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,6 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 export const Mostsells = () => {
+  const swiperRef = useRef<Swiper>();
   const shoesItems: {
     price2: string;
     price: string;
@@ -137,11 +139,11 @@ export const Mostsells = () => {
           <DiscountSvg />
         </div>
         <div className=" mr-5">
-          <h1 className=" font-black">تخفیف های ویتسل</h1>
+          <h1 className=" font-black truncate">پرفروش ترین محصولات</h1>
         </div>
         <div className=" bg-red-100 h-0.5 w-865 mt-4 mr-6"></div>
         <div className=" mr-5">
-          <button>مشاهده ی همه</button>
+          <button className="truncate">مشاهده ی همه</button>
         </div>
         <div className=" mb-1 -rotate-90">^</div>
       </div>
@@ -151,7 +153,10 @@ export const Mostsells = () => {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={76}
         slidesPerView={6}
-        navigation
+        // navigation
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         //   pagination={{ clickable: true }}
         //   scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
@@ -172,12 +177,16 @@ export const Mostsells = () => {
             </div>
           </SwiperSlide>
         ))}
+        <div className=" z-0 -mt-44 flex justify-between">
+          <button  className="z-50 rotate-180" onClick={() => swiperRef.current?.slidePrev()}><DirectionSvg/></button>
+          <button className="z-50"  onClick={() => swiperRef.current?.slideNext()}><DirectionSvg/></button>
+        </div>
       </Swiper>
       <div className="grid grid-cols-2 gap-4 mt-6">
-        <Image src={BottomPhoto3} alt="" className=" rounded-3xl"/>
+        <Image src={BottomPhoto3} alt="" className=" rounded-3xl" />
         <div className="grid grid-row">
-            <Image src={BottomPhoto4} alt="" className="rounded-3xl"/>
-            <Image src={BottomPhoto5} alt="" className="rounded-3xl mt-4" />
+          <Image src={BottomPhoto4} alt="" className="rounded-3xl" />
+          <Image src={BottomPhoto5} alt="" className="rounded-3xl mt-4" />
         </div>
       </div>
     </div>

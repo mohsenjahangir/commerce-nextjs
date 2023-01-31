@@ -4,14 +4,17 @@ import SanfordPhoto from "../../../../public/photos/sanford.png";
 import BottomPhoto1 from "../../../../public/photos/bottom1.png";
 import BottomPhoto2 from "../../../../public/photos/bottom2.png";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper , SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export const Top = () => {
+  const swiperRef1 = useRef<Swiper>();
+  const swiperRef2 = useRef<Swiper>();
   const shoesItems: {
     price2: string;
     price: string;
@@ -53,18 +56,35 @@ export const Top = () => {
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={1}
               slidesPerView={1}
-              navigation
-              //   pagination={{ clickable: true }}
+              // navigation
+              onBeforeInit={(swiper) => {
+                swiperRef2.current = swiper;
+              }}
+                pagination={{ clickable: true }}
               //   scrollbar={{ draggable: true }}
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log("slide change")}
-              className="bg-F7  rounded-3xl "
+              className="bg-F7  rounded-3xl h-373"
             >
               {shoesItems.map((item) => (
                 <SwiperSlide className="">
                   <Image src={item.image} alt="" className="" />
                 </SwiperSlide>
               ))}
+                       <div className=" -mt-56  z-0 flex justify-between">
+                <button
+                  className=" z-50 rotate-180"
+                  onClick={() => swiperRef2.current?.slidePrev()}
+                >
+                  <DirectionSvg />
+                </button>
+                <button
+                  className="z-50"
+                  onClick={() => swiperRef2.current?.slideNext()}
+                >
+                  <DirectionSvg />
+                </button>
+              </div>
             </Swiper>
           </div>
           <div className="">
@@ -73,21 +93,40 @@ export const Top = () => {
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={1}
               slidesPerView={1}
-              navigation
-              //   pagination={{ clickable: true }}
-              //   scrollbar={{ draggable: true }}
+              // navigation
+              onBeforeInit={(swiper) => {
+                swiperRef1.current = swiper;
+              }}
+              pagination={{ clickable: true }}
+              // scrollbar={{ draggable: true }}
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log("slide change")}
-              className="bg-F7 w-282 h-373  rounded-3xl "
+              className="bg-F7 w-282 h-373 rounded-3xl "
             >
               {shoesItems.map((item) => (
                 <SwiperSlide className=" mr-2">
                   <Image src={SanfordPhoto} alt="" className=" mr-6 mt-3" />
                   <h1 className=" mt-5 font-black">{item.title}</h1>
                   <h1 className=" mt-8 text-left ml-8">{item.price}</h1>
-                  <h1 className="text-left ml-8 line-through text-gray-400">{item.price2}</h1>
+                  <h1 className="text-left ml-8 line-through text-gray-400">
+                    {item.price2}
+                  </h1>
                 </SwiperSlide>
               ))}
+              <div className=" -mt-56  z-0 flex justify-between">
+                <button
+                  className=" z-50 rotate-180"
+                  onClick={() => swiperRef1.current?.slidePrev()}
+                >
+                  <DirectionSvg />
+                </button>
+                <button
+                  className="z-50"
+                  onClick={() => swiperRef1.current?.slideNext()}
+                >
+                  <DirectionSvg />
+                </button>
+              </div>
             </Swiper>
           </div>
         </div>

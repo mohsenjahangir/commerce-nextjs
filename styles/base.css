@@ -30,6 +30,7 @@ html {
 html,
 body {
     font-family: IranSans !important;
+    
     direction: rtl !important;
 }
 

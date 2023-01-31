@@ -1,4 +1,4 @@
-import React from "react";
+
 import DiscountSvg from "../../../../public/svg/discountIcon.svg";
 import ArrowLeftSvg from "../../../../public/svg/arrowLeftIcon.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,13 +8,14 @@ import BottomPhoto1 from "../../../../public/photos/bottom1.png";
 import BottomPhoto2 from "../../../../public/photos/bottom2.png";
 import Image from "next/image";
 import ShoesPhoto from "../../../../public/photos/shoes.png";
-
+import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export const Discount = () => {
+  const swiperRef = useRef<Swiper>();
   const shoesItems: {
     price2: string;
     price: string;
@@ -149,9 +150,12 @@ export const Discount = () => {
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         spaceBetween={76}
         slidesPerView={6}
-        navigation
+        // navigation
         //   pagination={{ clickable: true }}
         //   scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
@@ -172,6 +176,10 @@ export const Discount = () => {
             </div>
           </SwiperSlide>
         ))}
+        <div className="z-0 flex justify-between -mt-44">
+          <button className="z-50 rotate-180" onClick={() => swiperRef.current?.slidePrev()}><DirectionSvg/></button>
+          <button className="z-50" onClick={() => swiperRef.current?.slideNext()}><DirectionSvg/></button>
+        </div>
       </Swiper>
       <div className="grid grid-cols-2   mt-4">
         <div className=" w-1200 h-52">
