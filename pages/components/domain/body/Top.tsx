@@ -20,26 +20,31 @@ export const Top = () => {
     price: string;
     title: string;
     image: any;
+    id:Number;
   }[] = [
     {
+      id:1,
       image: PhonePhoto,
       price: "4,343.000تومان ",
       price2: "4,343.000تومان ",
       title: "همزن برقی Sanford",
     },
     {
+      id:2,
       image: PhonePhoto,
       price: "4,343.000تومان ",
       price2: "4,343.000تومان ",
       title: "همزن برقی Sanford",
     },
     {
+      id:3,
       image: PhonePhoto,
       price: "4,343.000تومان ",
       price2: "4,343.000تومان ",
       title: "همزن برقی Sanford",
     },
     {
+      id:4,
       image: PhonePhoto,
       price: "4,343.000تومان ",
       price2: "4,343.000تومان ",
@@ -67,7 +72,7 @@ export const Top = () => {
               className="bg-F7  rounded-3xl h-373"
             >
               {shoesItems.map((item) => (
-                <SwiperSlide className="">
+                <SwiperSlide className="" >
                   <Image src={item.image} alt="" className="" />
                 </SwiperSlide>
               ))}

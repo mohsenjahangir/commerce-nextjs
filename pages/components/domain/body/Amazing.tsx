@@ -6,6 +6,7 @@ import Fire2Svg from "../../../../public/svg/fire2Icon.svg";
 import HeadsetPhoto from "../../../../public/photos/headset.png";
 export const Amazing = () => {
   const AmazingItems: {
+    id:number;
     icon: any;
     title: string;
     price: string;
@@ -14,6 +15,7 @@ export const Amazing = () => {
     image: any;
   }[] = [
     {
+      id:1,
       icon: Fire2Svg,
       image: HeadsetPhoto,
       price: "4,343,000 تومان",
@@ -22,6 +24,7 @@ export const Amazing = () => {
       off: "34%",
     },
     {
+      id:2,
         icon: Fire2Svg,
         image: HeadsetPhoto,
         price: "4,343,000 تومان",
@@ -30,6 +33,7 @@ export const Amazing = () => {
         off: "34%",
       },
       {
+        id:3,
         icon: Fire2Svg,
         image: HeadsetPhoto,
         price: "4,343,000 تومان",
@@ -38,6 +42,7 @@ export const Amazing = () => {
         off: "34%",
       },
       {
+        id:4,
         icon: Fire2Svg,
         image: HeadsetPhoto,
         price: "4,343,000 تومان",
@@ -46,6 +51,7 @@ export const Amazing = () => {
         off: "34%",
       },
       {
+        id:5,
         icon: Fire2Svg,
         image: HeadsetPhoto,
         price: "4,343,000 تومان",
@@ -54,6 +60,7 @@ export const Amazing = () => {
         off: "34%",
       },
       {
+        id:6,
         icon: Fire2Svg,
         image: HeadsetPhoto,
         price: "4,343,000 تومان",
@@ -62,6 +69,7 @@ export const Amazing = () => {
         off: "34%",
       },
       {
+        id:7,
         icon: Fire2Svg,
         image: HeadsetPhoto,
         price: "4,343,000 تومان",
@@ -70,6 +78,7 @@ export const Amazing = () => {
         off: "34%",
       },
       {
+        id:8,
         icon: Fire2Svg,
         image: HeadsetPhoto,
         price: "4,343,000 تومان",
@@ -78,6 +87,7 @@ export const Amazing = () => {
         off: "34%",
       },
       {
+        id:9,
         icon: Fire2Svg,
         image: HeadsetPhoto,
         price: "4,343,000 تومان",
@@ -114,8 +124,8 @@ export const Amazing = () => {
         </div>
         <div className=" col-span-3">
           <div className="grid grid-cols-3">
-            {AmazingItems.map((item) => (
-                <div className="flex justify-between bg-F7 w-274 h-28 rounded-3xl mb-4 mr-6">
+            {AmazingItems.map((item,id) => (
+                <div className="flex justify-between bg-F7 w-274 h-28 rounded-3xl mb-4 mr-6" key={item.id}>
                     <div><Image src={HeadsetPhoto} alt=""/></div>
                     <div className="ml-2">
                         <div className="flex justify-between mt-0.5"><h1 className=" mt-3 ml-2 font-black truncate">{item.title}</h1><Fire2Svg/>

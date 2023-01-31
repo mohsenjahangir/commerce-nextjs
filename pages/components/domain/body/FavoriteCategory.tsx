@@ -17,58 +17,68 @@ export const FavoriteCategory = () => {
     title: string;
     price: string;
     off: string;
-    image:any
+    image:any;
+    id:Number;
     
   }[] = [
     {
+      id:1,
       image:Catego1,
       price: "4,343,000",
       title: "تجهیزات صنعتی",
       off: "34%",
     },
     {
+      id:2,
       image:Catego2,
       price: "4,343,000",
       title: "لوازم تحریر",
       off: "34%",
     },
     {
+      id:3,
       image:Catego3,
       price: "4,343,000",
       title: "کالای دیجیتال",
       off: "34%",
     },
     {
+      id:4,
       image:Catego4,
       price: "4,343,000",
       title: "موبایل",
       off: "34%",
     },
     {
+      id:5,
       image:Catego5,
       price: "4,343,000",
       title: "مدوپوشاک",
       off: "34%",
     },
     {
+      id:6,
       image:Catego6,
       price: "4,343,000",
       title: "خانه و آشپزخانه",
       off: "34%",
     },
     {
+      id:7,
       image:Catego7,
       price: "4,343,000",
       title: "زیبایی و سلامت",
       off: "34%",
     },
     {
+      id:8,
       image:Catego8,
       price: "4,343,000",
       title: "اسباب بازی",
       off: "34%",
     },
     {
+      id:9,
       image:Catego9,
       price: "4,343,000",
       title: "سوپر مارکت",
@@ -90,7 +100,7 @@ export const FavoriteCategory = () => {
             <div className=" bg-red-100 h-0.5 w-full mt-4 mr-6"></div>
           </div>
           <div className="h-56 grid grid-cols-5 gap-6 -mr-6 mt-6">
-            {CategoItems.map((item)=>
+            {CategoItems.map((item,id)=>
             <div className=" bg-F7 rounded-2xl mr-6 w-36 h-36">
               <Image src={item.image} alt="" className=" mr-5"/>
               <h1 className=" font-black text-center">{item.title}</h1>

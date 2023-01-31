@@ -21,110 +21,129 @@ export const Discount = () => {
     price: string;
     off: string;
     icon: any;
+    id:Number;
   }[] = [
     {
+      id:1,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:2,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:3,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:4,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:5,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:6,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:7,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:8,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:9,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:10,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:11,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:12,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:13,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:14,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:15,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:16,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:17,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
+      id:18,
       icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
@@ -162,8 +181,8 @@ export const Discount = () => {
         onSlideChange={() => console.log("slide change")}
         className="bg-F7 mt-6  rounded-3xl h-64"
       >
-        {shoesItems.map((item) => (
-          <SwiperSlide className=" mt-8">
+        {shoesItems.map((item,id) => (
+          <SwiperSlide  className=" mt-8">
             <Image src={ShoesPhoto} alt="" className="" />
             <div className=" flex justify-between mr-9">
               <span className="font-black ">{item.price}</span>تومان

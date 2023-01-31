@@ -12,18 +12,22 @@ function Header() {
         title: string;
         link: string;
         icon:any ;
+        id:Number;
     }[] = [
         {
+            id:1,
             icon: <MenuIconSvg/>,
             link: '/categories',
             title: 'دسته بندی',
         },
         {
+            id:2,
             icon:<FireSvg/> ,
             title: 'پرفروش ترین ها',
             link: '/most-seles',
         },
         {
+            id:3,
             icon:<DiscountSvg/>,
             title: 'تخفیف دارها',
             link: 'days-discount',
@@ -37,7 +41,7 @@ function Header() {
                 {/* bg-yellow-500 */}
                 {navItems.map((item) => {
                     return (
-                        <div key={item.title} className="flex gap-1 ">
+                        <div key={item.title} className="flex gap-1">
                             <div className='mt-2 mb-2.5'>{item.icon}</div>
                             <div className="text-sm mt-2 mb-2.5">{item.title}</div>
                             {/* bg-gray-700 */}
