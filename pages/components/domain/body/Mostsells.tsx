@@ -185,7 +185,7 @@ export const Mostsells = () => {
         className="bg-F7 mt-6  rounded-3xl h-64"
       >
         {shoesItems.map((item) => (
-          <SwiperSlide className=" mt-8" key={item.id}>
+          <SwiperSlide className=" mt-8" >
             <Image src={item.image} alt="" className="" />
             <div className=" flex justify-between mr-9">
               <span className="font-black ">{item.price}</span>تومان
