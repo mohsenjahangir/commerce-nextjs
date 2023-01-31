@@ -71,8 +71,8 @@ export const Top = () => {
               onSlideChange={() => console.log("slide change")}
               className="bg-F7  rounded-3xl h-373"
             >
-              {shoesItems.map((item) => (
-                <SwiperSlide className="" >
+              {shoesItems.map((item,id) => (
+                <SwiperSlide className="" key={item.id} >
                   <Image src={item.image} alt="" className="" />
                 </SwiperSlide>
               ))}
