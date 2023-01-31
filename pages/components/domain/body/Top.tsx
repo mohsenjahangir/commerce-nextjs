@@ -5,7 +5,8 @@ import BottomPhoto1 from "../../../../public/photos/bottom1.png";
 import BottomPhoto2 from "../../../../public/photos/bottom2.png";
 import Image from "next/image";
 import { Swiper , SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper as SwiperType, Navigation } from 'swiper';
+import {  Pagination, Scrollbar, A11y } from "swiper";
 import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,8 +14,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export const Top = () => {
-  const swiperRef1 = useRef(Swiper);
-  const swiperRef2 = useRef(Swiper);
+  const swiperRef1 = useRef<SwiperType>();
+  const swiperRef2 = useRef<SwiperType>();
   const shoesItems: {
     price2: string;
     price: string;

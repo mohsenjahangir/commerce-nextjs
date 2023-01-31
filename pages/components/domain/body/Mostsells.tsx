@@ -3,7 +3,8 @@ import { useRef } from "react";
 import DiscountSvg from "../../../../public/svg/discountIcon.svg";
 import ArrowLeftSvg from "../../../../public/svg/arrowLeftIcon.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper as SwiperType, Navigation } from 'swiper'
+import { Pagination, Scrollbar, A11y } from "swiper";
 import DirectionSvg from "../../../../public/svg/leftdirectionIcongray.svg";
 import BottomPhoto5 from "../../../../public/photos/bottom5.png";
 import BottomPhoto4 from "../../../../public/photos/bottom4.png";
@@ -16,7 +17,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 export const Mostsells = () => {
-  const swiperRef = useRef(Swiper);
+  const swiperRef = useRef<SwiperType>();
   const shoesItems: {
     price2: string;
     price: string;
