@@ -16,7 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 export const Mostsells = () => {
-  const swiperRef = useRef<Swiper>();
+  const swiperRef = useRef(Swiper);
   const shoesItems: {
     price2: string;
     price: string;

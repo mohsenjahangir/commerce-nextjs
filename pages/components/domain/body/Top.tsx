@@ -13,8 +13,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export const Top = () => {
-  const swiperRef1 = useRef<Swiper>();
-  const swiperRef2 = useRef<Swiper>();
+  const swiperRef1 = useRef(Swiper);
+  const swiperRef2 = useRef(Swiper);
   const shoesItems: {
     price2: string;
     price: string;
