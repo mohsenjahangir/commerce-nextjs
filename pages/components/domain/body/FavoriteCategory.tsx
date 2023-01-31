@@ -101,7 +101,7 @@ export const FavoriteCategory = () => {
           </div>
           <div className="h-56 grid grid-cols-5 gap-6 -mr-6 mt-6">
             {CategoItems.map((item,id)=>
-            <div className=" bg-F7 rounded-2xl mr-6 w-36 h-36">
+            <div className=" bg-F7 rounded-2xl mr-6 w-36 h-36" key={item.title}>
               <Image src={item.image} alt="" className=" mr-5"/>
               <h1 className=" font-black text-center">{item.title}</h1>
             </div>

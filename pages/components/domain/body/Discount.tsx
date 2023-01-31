@@ -18,11 +18,12 @@ import "swiper/css/scrollbar";
 export const Discount = () => {
   const swiperRef = useRef<SwiperType>();
   const shoesItems: {
+    id:Number;
     price2: string;
     price: string;
     off: string;
     icon: any;
-    id:Number;
+    
   }[] = [
     {
       id:1,
@@ -183,7 +184,8 @@ export const Discount = () => {
         className="bg-F7 mt-6  rounded-3xl h-64"
       >
         {shoesItems.map((item,id) => (
-          <SwiperSlide  className=" mt-8">
+          
+          <SwiperSlide key={item.icon} className=" mt-8">
             <Image src={ShoesPhoto} alt="" className="" />
             <div className=" flex justify-between mr-9">
               <span className="font-black ">{item.price}</span>تومان

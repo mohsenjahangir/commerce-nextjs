@@ -73,7 +73,7 @@ export const Top = () => {
               className="bg-F7  rounded-3xl h-373"
             >
               {shoesItems.map((item,id) => (
-                <SwiperSlide className=""  >
+                <SwiperSlide className="" key={item.title} >
                   <Image src={item.image} alt="" className="" />
                 </SwiperSlide>
               ))}
@@ -110,7 +110,7 @@ export const Top = () => {
               className="bg-F7 w-282 h-373 rounded-3xl "
             >
               {shoesItems.map((item,id) => (
-                <SwiperSlide className=" mr-2">
+                <SwiperSlide className=" mr-2" key={item.title}>
                   <Image src={SanfordPhoto} alt="" className=" mr-6 mt-3" />
                   <h1 className=" mt-5 font-black">{item.title}</h1>
                   <h1 className=" mt-8 text-left ml-8">{item.price}</h1>
