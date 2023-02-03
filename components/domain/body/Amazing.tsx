@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import FireSvg from "../../../../public/svg/fireIcon.svg";
-import SanfordPhoto from "../../../../public/photos/sanford.png";
-import Fire2Svg from "../../../../public/svg/fire2Icon.svg";
-import HeadsetPhoto from "../../../../public/photos/headset.png";
-export const Amazing = () => {
+import FireSvg from "../../../public/svg/fireIcon.svg";
+import SanfordPhoto from "../../../public/photos/sanford.png";
+import Fire2Svg from "../../../public/svg/fire2Icon.svg";
+import HeadsetPhoto from "../../../public/photos/headset.png";
+const Amazing = () => {
   const AmazingItems: {
     id:number;
     icon: any;
@@ -141,3 +141,4 @@ export const Amazing = () => {
     </div>
   );
 };
+ export default Amazing

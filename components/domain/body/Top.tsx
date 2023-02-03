@@ -1,8 +1,8 @@
-import PhonePhoto from "../../../../public/photos/phonePhoto.png";
-import DirectionSvg from "../../../../public/svg/leftdirectionIcongray.svg";
-import SanfordPhoto from "../../../../public/photos/sanford.png";
-import BottomPhoto1 from "../../../../public/photos/bottom1.png";
-import BottomPhoto2 from "../../../../public/photos/bottom2.png";
+import PhonePhoto from "../../../public/photos/phonePhoto.png";
+import DirectionSvg from "../../../public/svg/leftdirectionIcongray.svg";
+import SanfordPhoto from "../../../public/photos/sanford.png";
+import BottomPhoto1 from "../../../public/photos/bottom1.png";
+import BottomPhoto2 from "../../../public/photos/bottom2.png";
 import Image from "next/image";
 import { Swiper , SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType, Navigation } from 'swiper';
@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-export const Top = () => {
+const Top = () => {
   const swiperRef1 = useRef<SwiperType>();
   const swiperRef2 = useRef<SwiperType>();
   const shoesItems: {
@@ -148,3 +148,4 @@ export const Top = () => {
     </>
   );
 };
+export default Top

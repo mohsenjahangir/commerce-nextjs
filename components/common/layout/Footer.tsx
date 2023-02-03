@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import LogoSvg from "../../../../public/svg/logoIconBig.svg";
-import SendSvg from "../../../../public/svg/sendIcon.svg";
-import PhoneSvg from "../../../../public/svg/phoneIcon.svg";
-import AddressSvg from "../../../../public/svg/addressIcon.svg";
-import InstagramSvg from "../../../../public/svg/instagramIcon.svg";
-import TelegramSvg from "../../../../public/svg/telegramIcon.svg";
-import WhatsupSvg from "../../../../public/svg/whatsupIcon.svg";
-import StandardPhoto from "../../../../public/photos/standard.png"
-import UnitedPhoto from "../../../../public/photos/united.png";
+import LogoSvg from "../../../public/svg/logoIconBig.svg";
+import SendSvg from "../../../public/svg/sendIcon.svg";
+import PhoneSvg from "../../../public/svg/phoneIcon.svg";
+import AddressSvg from "../../../public/svg/addressIcon.svg";
+import InstagramSvg from "../../../public/svg/instagramIcon.svg";
+import TelegramSvg from "../../../public/svg/telegramIcon.svg";
+import WhatsupSvg from "../../../public/svg/whatsupIcon.svg";
+import StandardPhoto from "../../../public/photos/standard.png"
+import UnitedPhoto from "../../../public/photos/united.png";
 function Footer() {
   return (
     <>

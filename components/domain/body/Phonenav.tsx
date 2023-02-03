@@ -1,9 +1,9 @@
 import React from "react";
-import PhoneNav from "../../../../public/photos/phonenav.png";
-import BigPhone from '../../../../public/photos/bigphone.png';
+import PhoneNav from "../../../public/photos/phonenav.png";
+import BigPhone from '../../../public/photos/bigphone.png';
 import Image from "next/image";
 
-export const Phonenav = () => {
+const Phonenav = () => {
   return (
     <>
     <div className="mr-30 w-1200 mt-14">
@@ -14,3 +14,4 @@ export const Phonenav = () => {
     </>
   );
 };
+ export default Phonenav

@@ -1,153 +1,152 @@
-import React from "react";
-import { useRef } from "react";
-import DiscountSvg from "../../../../public/svg/discountIcon.svg";
-import ArrowLeftSvg from "../../../../public/svg/arrowLeftIcon.svg";
+
+import DiscountSvg from "../../../public/svg/discountIcon.svg";
+import ArrowLeftSvg from "../../../public/svg/arrowLeftIcon.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType, Navigation } from 'swiper'
 import { Pagination, Scrollbar, A11y } from "swiper";
-import DirectionSvg from "../../../../public/svg/leftdirectionIcongray.svg";
-import BottomPhoto5 from "../../../../public/photos/bottom5.png";
-import BottomPhoto4 from "../../../../public/photos/bottom4.png";
-import BottomPhoto3 from "../../../../public/photos/bottom3.png";
+import DirectionSvg from "../../../public/svg/leftdirectionIcongray.svg";
+import BottomPhoto1 from "../../../public/photos/bottom1.png";
+import BottomPhoto2 from "../../../public/photos/bottom2.png";
 import Image from "next/image";
-import ShoesPhoto from "../../../../public/photos/shoes.png";
-
+import ShoesPhoto from "../../../public/photos/shoes.png";
+import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-export const Mostsells = () => {
+
+ const Discount = () => {
   const swiperRef = useRef<SwiperType>();
   const shoesItems: {
+    id:Number;
     price2: string;
     price: string;
     off: string;
-    image: any;
-    id:Number;
+    icon: any;
+    
   }[] = [
     {
       id:1,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
-
     },
     {
       id:2,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:3,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:4,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:5,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:6,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:7,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:8,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:9,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:10,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:11,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:12,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:13,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:14,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:15,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:16,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:17,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
     },
     {
       id:18,
-      image: ShoesPhoto,
+      icon: <DirectionSvg />,
       price: "4,343,000",
       price2: "4,343,000",
       off: "34%",
@@ -160,11 +159,11 @@ export const Mostsells = () => {
           <DiscountSvg />
         </div>
         <div className=" mr-5">
-          <h1 className=" font-black truncate">پرفروش ترین محصولات</h1>
+          <h1 className=" font-black">تخفیف های ویتسل</h1>
         </div>
         <div className=" bg-red-100 h-0.5 w-865 mt-4 mr-6"></div>
         <div className=" mr-5">
-          <button className="truncate">مشاهده ی همه</button>
+          <button>مشاهده ی همه</button>
         </div>
         <div className=" mb-1 -rotate-90">^</div>
       </div>
@@ -172,12 +171,12 @@ export const Mostsells = () => {
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={76}
-        slidesPerView={6}
-        // navigation
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
+        spaceBetween={76}
+        slidesPerView={6}
+        // navigation
         //   pagination={{ clickable: true }}
         //   scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
@@ -185,8 +184,9 @@ export const Mostsells = () => {
         className="bg-F7 mt-6  rounded-3xl h-64"
       >
         {shoesItems.map((item,id) => (
-          <SwiperSlide className=" mt-8" key={item.price}>
-            <Image src={item.image} alt="" className="" />
+          
+          <SwiperSlide key={item.icon} className=" mt-8">
+            <Image src={ShoesPhoto} alt="" className="" />
             <div className=" flex justify-between mr-9">
               <span className="font-black ">{item.price}</span>تومان
             </div>
@@ -198,18 +198,20 @@ export const Mostsells = () => {
             </div>
           </SwiperSlide>
         ))}
-        <div className=" z-0 -mt-44 flex justify-between">
-          <button  className="z-50 rotate-180" onClick={() => swiperRef.current?.slidePrev()}><DirectionSvg/></button>
-          <button className="z-50"  onClick={() => swiperRef.current?.slideNext()}><DirectionSvg/></button>
+        <div className="z-0 flex justify-between -mt-44">
+          <button className="z-50 rotate-180" onClick={() => swiperRef.current?.slidePrev()}><DirectionSvg/></button>
+          <button className="z-50" onClick={() => swiperRef.current?.slideNext()}><DirectionSvg/></button>
         </div>
       </Swiper>
-      <div className="grid grid-cols-2 gap-4 mt-6">
-        <Image src={BottomPhoto3} alt="" className=" rounded-3xl" />
-        <div className="grid grid-row">
-          <Image src={BottomPhoto4} alt="" className="rounded-3xl" />
-          <Image src={BottomPhoto5} alt="" className="rounded-3xl mt-4" />
+      <div className="grid grid-cols-2   mt-4">
+        <div className=" w-1200 h-52">
+          <Image className=" rounded-2xl" src={BottomPhoto1} alt="" />
+        </div>
+        <div className=" w-1200 h-52 mr-1">
+          <Image className=" rounded-2xl" src={BottomPhoto2} alt="" />
         </div>
       </div>
     </div>
   );
 };
+export default Discount

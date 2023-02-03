@@ -1,18 +1,18 @@
 import React from "react";
-import MenuIconSvg from "../../../../public/svg/menuIcon.svg";
-import BigCart from '../../../../public/photos/bigcart.png'
+import MenuIconSvg from "../../../public/svg/menuIcon.svg";
+import BigCart from '../../../public/photos/bigcart.png'
 import Image from "next/image";
-import Catego1 from '../../../../public/photos/cate (1).png';
-import Catego2 from '../../../../public/photos/cate (2).png';
-import Catego3 from '../../../../public/photos/cate (3).png';
-import Catego4 from '../../../../public/photos/cate (4).png';
-import Catego5 from '../../../../public/photos/cate (5).png';
-import Catego6 from '../../../../public/photos/cate (6).png';
-import Catego7 from '../../../../public/photos/cate (7).png';
-import Catego8 from '../../../../public/photos/cate (8).png';
-import Catego9 from '../../../../public/photos/cate (9).png';
+import Catego1 from '../../../public/photos/cate (1).png';
+import Catego2 from '../../../public/photos/cate (2).png';
+import Catego3 from '../../../public/photos/cate (3).png';
+import Catego4 from '../../../public/photos/cate (4).png';
+import Catego5 from '../../../public/photos/cate (5).png';
+import Catego6 from '../../../public/photos/cate (6).png';
+import Catego7 from '../../../public/photos/cate (7).png';
+import Catego8 from '../../../public/photos/cate (8).png';
+import Catego9 from '../../../public/photos/cate (9).png';
 
-export const FavoriteCategory = () => {
+ const FavoriteCategory = () => {
   const CategoItems: {
     title: string;
     price: string;
@@ -115,3 +115,4 @@ export const FavoriteCategory = () => {
     </div>
   );
 };
+ export default FavoriteCategory

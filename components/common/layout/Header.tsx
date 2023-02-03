@@ -1,10 +1,10 @@
 
-import FireSvg from '../../../../public/svg/fireIcon.svg';
-import DiscountSvg from '../../../../public/svg/discountIcon.svg';
-import MenuIconSvg from '../../../../public/svg/menuIcon.svg';
-import LogoSvg from '../../../../public/svg/logoIcon.svg';
-import SearchSvg from '../../../../public/svg/searchIcon.svg';
-import CartSvg from '../../../../public/svg/cartIcon.svg';
+import FireSvg from '../../../public/svg/fireIcon.svg';
+import DiscountSvg from '../../../public/svg/discountIcon.svg';
+import MenuIconSvg from '../../../public/svg/menuIcon.svg';
+import LogoSvg from '../../../public/svg/logoIcon.svg';
+import SearchSvg from '../../../public/svg/searchIcon.svg';
+import CartSvg from '../../../public/svg/cartIcon.svg';
 
 
 function Header() {
